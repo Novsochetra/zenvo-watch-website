@@ -1,0 +1,44 @@
+<style>
+  /* Define a scroll timeline tied to the viewport */
+  @scroll-timeline fade-in-timeline {
+    source: auto; /* auto = viewport */
+    orientation: block;
+    scroll-offsets: start 100px;
+  }
+
+  .fade-in-item {
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: fade-in-timeline;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Just to create vertical space */
+  body {
+    height: 150vh;
+    margin: 0;
+    padding: 20px;
+  }
+
+  div {
+    margin-top: 200px;
+    padding: 20px;
+    background: coral;
+  }
+</style>
+
+<body>
+  <div class="fade-in-item">This fades in as you scroll!</div>
+</body>

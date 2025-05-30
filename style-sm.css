@@ -1,0 +1,12 @@
+@media (max-width: 640px) {
+  /* .container {
+  } */
+
+  /* Start Footer */
+  footer > div {
+    flex: none;
+    width: 100% !important;
+    text-align: center;
+  }
+  /* End Footer */
+}

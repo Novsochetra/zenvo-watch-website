@@ -1,0 +1,219 @@
+@media (max-width: 768px) {
+  /* Start Navbar */
+  nav {
+    padding: 16px 16px;
+  }
+
+  .nav-desktop-menu {
+    display: none;
+  }
+
+  .nav-mobile-menu {
+    position: relative;
+    background-color: black;
+    display: flex;
+    padding: 16px 16px;
+  }
+
+  .nav-mobile-menu > #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu-btn + ul {
+    display: none;
+    height: 800px;
+
+    animation-name: slideInRight;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+  }
+
+  .nav-mobile-menu > .menu-btn {
+    display: block;
+  }
+
+  .nav-mobile-menu > ul:nth-child(3) {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    z-index: 99;
+    padding: 0px 16px;
+    background-color: black;
+    width: 100%;
+
+    opacity: 0;
+    transform: translateX(-20px);
+
+    animation-name: slideInRight;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+  }
+
+  .nav-mobile-menu ul:nth-child(3) > li {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+  }
+
+  .nav-mobile-menu > ul:nth-child(5) {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+
+  .nav-mobile-menu > img {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 32px;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav-mobile-menu > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-family-gt-walsheim);
+    font-size: var(--text-base);
+    font-weight: 100;
+  }
+  /* End Navbar */
+
+  /* Start New Arrival */
+  .new-arrival {
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow: hidden;
+  }
+
+  /* End New Arrival */
+
+  /* Start Show Case */
+  .showcase {
+    padding: 16px;
+    column-gap: 16px;
+    row-gap: 28px;
+  }
+
+  .showcase > :nth-child(odd) > .showcase-item-info,
+  .showcase > :nth-child(even) > .showcase-item-info {
+    color: white;
+    left: unset;
+    right: unset;
+    position: relative;
+    top: unset;
+    transform: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .showcase-item-info > h1 {
+    margin-top: 16px;
+  }
+
+  /* End Show Case */
+
+  /* Start Show Case Collab */
+  .showcase-collab {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .showcase-collab > img {
+    max-width: unset;
+    width: 100% !important;
+  }
+
+  .showcase-collab-info > .showcase-collab-title {
+    font-size: 34px;
+  }
+
+  .showcase-collab > .showcase-collab-info {
+    padding: 16px;
+  }
+  /* End Show Case Collab */
+
+  /* Start Show Case Glass */
+  .showcase-sunglasses {
+    flex-wrap: wrap;
+  }
+
+  .showcase-sunglasses-item-info {
+    flex: none;
+    max-width: unset;
+    width: 100% !important;
+  }
+
+  .showcase-sunglasses-item-info > h1 {
+    font-size: 34px;
+  }
+  /* End Show Case Glass */
+
+  /* Start Our Promise */
+  .our-promise > h1 {
+    font-size: 34px;
+  }
+  .our-promise-items {
+    flex-wrap: wrap;
+  }
+
+  .our-promise-items > .our-promise-item {
+    flex: none;
+    width: 100% !important;
+  }
+  /* End Our Promise */
+
+  /* Start Gallery */
+  .gallery {
+    flex-wrap: wrap;
+  }
+  .gallery > .gallery-item {
+    flex: none;
+    width: 100% !important;
+  }
+  /* End Gallery */
+
+  /* Start Get Latest News */
+  .get-latest-news {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .get-latest-news > h1 {
+    font-family: var(--font-family-georgia);
+    font-weight: 100;
+    font-size: 34px;
+    margin-bottom: 16px;
+  }
+
+  .get-latest-news > form > input[type="text"] {
+    flex: none;
+    width: 100% !important;
+  }
+  /* End Get Latest News */
+
+  /* Start Footer */
+  footer > div {
+    flex: none;
+    width: 100% !important;
+    text-align: center;
+  }
+  /* End Footer */
+
+  @keyframes slideInRight {
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+}
